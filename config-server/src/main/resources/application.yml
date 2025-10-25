@@ -9,6 +9,6 @@ spring:
     config:
       server:
         git:
-          uri: 
+          uri: https://github.com/Navaneeth-V/spring-configuration.git
           clone-on-start: true
           default-label: main
