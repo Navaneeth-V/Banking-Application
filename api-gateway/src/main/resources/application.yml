@@ -2,12 +2,17 @@ server:
   port: 8080
 
 spring:
+  application:
+    name: application
+  config:
+    import: configserver:http://localhost:8888
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
 
 
 eureka:
